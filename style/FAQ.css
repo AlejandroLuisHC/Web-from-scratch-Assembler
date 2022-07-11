@@ -1,0 +1,81 @@
+main h2 {
+  color: #bb3a3a;
+  text-align: center;
+  margin: .8em 0;
+}
+.banner {
+  background-image: url(../assets/img/FAQ.jpg);
+  background-size: 73%;
+  background-position: 50% 50%;
+  height: 250px;
+}
+
+  .banner * {
+    color: white;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    padding: 60px 300px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  }
+
+.faq {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[5];
+  grid-template-rows: repeat(5, 1fr);
+}
+  .faq > div {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 3fr;
+    grid-template-columns: 2fr 3fr;
+    margin: 1em 0;
+    
+  }
+    .statement {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: right;
+          -ms-flex-pack: right;
+              justify-content: right;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding-right: 2em;
+      border-right: 2px solid #bb3a3a;
+    }
+      .statement span {
+        font-size: .7em;
+        font-weight: bold;
+      }
+      .statement i {
+        margin-right: .5em;
+        color: #bb3a3a;
+      }
+
+    .description {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+      padding-left: 2em;
+    }
+      .description * {
+        font-size: .7em;
+      }
+      .description a {
+        padding-top: .5em;
+        text-decoration: none;
+        color: #bb3a3a;
+      }
+      .description a:hover {
+        text-decoration: underline;
+      }

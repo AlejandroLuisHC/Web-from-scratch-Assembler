@@ -1,0 +1,187 @@
+/*  Breadbrumb
+.................................................................*/
+.breadcrumb {
+  margin-top: 1em;
+}
+  .breadcrumb ul {
+    list-style: none;
+  }
+    .breadcrumb li {
+      display: inline;
+    }
+      .breadcrumb > li a {
+        text-decoration: none;
+        color: black;
+        font-size: .7em;
+      }
+      .breadcrumb li:last-child a {
+        font-weight: bold;
+      }
+        .breadcrumb > li
+        a span {
+          color: gray;
+          text-decoration: underline;
+        }
+        .breadcrumb > li
+        a span:hover {
+          color: black;
+        }
+
+/*  Title
+.................................................................*/
+.title {
+  padding: .5em 130px;
+  text-align: center;
+}
+  .title h4 {
+    font-size: 1.5em;
+  }
+  .title p {
+    margin: 1em;
+    font-size: .9em;
+  }
+
+/*  Filter nav
+.................................................................*/
+.filter {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr 1fr ;
+  grid-template-columns: 1fr 3fr 1fr ;
+}
+  .filter > * {
+    font-size: .7em;
+  }
+  .filter_title {
+    font-weight: bold;
+  }
+  .filter_options {
+    color: gray;
+  }
+    .filter_options > * {
+      margin-right: 2em;
+    } 
+    .filter_options :first-child,  
+    .filter_options :nth-child(2) {
+      cursor: pointer;
+    }
+    .filter_options :first-child:hover,  
+    .filter_options :nth-child(2):hover {
+      color: black;
+    }
+
+  .filter_order {
+    text-align: right;
+    font-weight: bold;
+    cursor: pointer;
+  }
+    .filter_order span:hover {
+      text-decoration: underline;
+    }
+
+/*  Products container
+.................................................................*/
+
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+  .products > a {
+    text-decoration: none;
+  }
+    .products > a .product_card:hover {
+      opacity: .8;
+    }
+    .products > a .product_card {
+      width: 231px; 
+      height: 346.5px;
+      margin-bottom: 12px;
+    }
+    .products :last-child .product_card {
+      margin-right: 486px;
+    }
+      .products > a .product_card
+      img {
+        -o-object-fit: cover;
+           object-fit: cover;
+        width: 231px;
+        height: 290px;
+      }
+    .products a:nth-child(3) .product_card {
+      width: 474px;
+    }
+      .products a:nth-child(3) .product_card
+      img {
+        width: 474px;
+      }
+  
+      .products > a .product_card
+      .product_card_info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+        .products > a .product_card
+        .product_card_info > * {
+          margin: .3em 0;
+          font-size: .7em;
+          color: black;
+        }
+        .products > a .product_card
+        .product_card_info .price {
+          font-weight: bold;
+        }
+        .products > a .product_card
+        .product_card_info .extra {
+          font-size: .7em;
+          font-weight: lighter;
+          color: gray;
+        }
+        .other_products > a .product_card
+        .product_card_info .extra:hover {
+          text-decoration: underline;
+        }
+         /* "new" and "light" tags 
+        .........................................*/
+        .new, .light {
+          width: 50px;
+          font-size: .7em;
+          position: absolute;
+          margin-left: 181px;
+          padding: .4em .2em;
+        }
+        .new {
+          background-color: dimgrey;
+          -ms-grid-column-align: right;
+              justify-self: right;
+          margin-top: 5px;
+        }
+          .new span {
+            color: white;
+            font-weight: bold;
+            padding-left: 1em; 
+          }
+        .light {
+          background-color: #0e5886;
+          margin-top: 35px;
+        }
+           .light * {
+            color: white;
+            font-weight: lighter;
+            }

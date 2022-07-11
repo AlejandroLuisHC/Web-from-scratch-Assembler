@@ -1,0 +1,376 @@
+.breadcrumb {
+  margin-top: 1em;
+}
+  .breadcrumb ul {
+    list-style: none;
+  }
+    .breadcrumb li {
+      display: inline;
+    }
+      .breadcrumb > li a {
+        text-decoration: none;
+        color: black;
+        font-size: .6em;
+      }
+      .breadcrumb li:last-child a {
+        font-weight: bold;
+      }
+        .breadcrumb > li
+        a span {
+          color: gray;
+          text-decoration: underline;
+        }
+        .breadcrumb > li
+        a span:hover {
+          color: black;
+        }
+
+/* Products container
+................................................................*/
+.product_container {
+  display: grid;
+  grid-template-columns: 12% 53% 35%;
+  height: 600px;
+  margin-bottom: 2em;
+}
+  /* Images listed left 
+  ...............................*/
+  .pics_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+    .pics_list > img {
+      margin: .15em 0;
+      width: 60px;
+      height: 40px;
+      object-fit: cover;
+      transition: .3s;
+    }
+    .pics_list > img:hover {
+      width: 70px;
+      height: 50px;
+      cursor: pointer;
+    }
+
+  /* Main image of the product 
+  ...............................*/
+  .slideshow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+    .slideshow img {
+      width: 470px;
+      height: 400px;
+      object-fit: cover;
+    }
+    .slideshow > span {
+      color: darkgray;
+      transform: scale(1.5, 2);
+      cursor: pointer;
+    }
+
+      /* "new" and "light" tags 
+      .........................................*/
+      .new_slide, .light_slide {
+        width: 45px;
+        font-size: .6em;
+        display: block;
+        position: absolute;
+        margin-left: 425px;
+        padding: .4em .2em;
+      }
+      .new_slide {
+        background-color: dimgrey;
+        -ms-grid-column-align: right;
+        justify-self: right;
+        margin-top: 5px;
+      }
+        .new_slide span {
+          color: white;
+          font-weight: bold;
+          padding-left: 1em; 
+        }
+      .light_slide {
+        background-color: #0e5886;
+        margin-top: 30px;
+      }
+        .light_slide * {
+        color: white;
+        font-weight: lighter;
+        }
+
+  /* Product information
+  ...............................*/
+  .product_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1em;
+    margin-top: 3em;
+  }
+    .product_info .name {
+      margin-bottom: 1em;
+    }
+      .product_info .name .product_code {
+        font-size: .6em;
+      }
+    .product_info .product_price {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+      .product_info .color_options 
+      .product_color {
+        font-size: .6em;
+      }
+      .product_info .color_options
+      .product_color_img {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+      }
+        .product_info .color_options
+        .product_color_img > img {
+          width: 40px;
+          height: 30px;
+          object-fit: cover;
+          margin-right: 5px;
+          transition: .2s;
+        }
+        .product_info .color_options
+        .product_color_img > img:hover {
+          width: 45px;
+          height: 35px;
+          cursor: pointer;
+        }
+
+    .product_info .product_shipping {
+      color: black;
+      font-weight: bold;
+      font-size: .6em;
+    }
+
+    .product_info .size_menu {
+      display: flex;
+      justify-content: space-between;
+      font-size: .6em;
+    }
+      .product_info .size_menu a {
+        color: black;
+      }
+    .product_info .size_options {
+      margin-top: 10px;
+      font-size: .7em;
+      color: #404040;
+    }
+      .product_info .size_options > span {
+        border: 1px solid gray;
+        border-radius: 50%;
+        padding: 3px;
+      }
+      .product_info .size_options > span:hover {
+        background-color: lightgray;
+        cursor: pointer;
+      }
+
+    .product_info button {
+      background-color: #bb3a3a;
+      border: none; 
+      color: white;
+      padding: .75em 0; 
+      font-size: .6em;
+    }
+    .product_info button:hover {
+      opacity: .7;
+      cursor: pointer;
+    }
+
+    .product_info .product_description {
+      font-size: .6em;
+    }
+
+  /* Dropboxes 
+  ...............................*/
+  .product_tech_dropbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product_shipping_dropbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .product_info_dropbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+    .dropbox .drop_info {
+      display: none;
+      grid-template: 1fr 1fr / 1fr 1fr;
+      padding: 1em;
+      font-size: .5em;
+      transition: .5s;
+
+    }
+      .dropbox .drop_info > div {
+        display: flex;
+        margin-bottom: 1em;
+      }
+        .dropbox .drop_info > div img {
+          object-fit: cover;
+          width: 15px;
+          height: 15px;
+          margin-right: 1em;
+        }
+
+  
+    /* Interactive elements
+    ...............................*/
+    .visible_menu {
+      display: flex;
+      justify-content: space-between;
+      font-size: .7em;
+      font-weight: bold;
+      border-bottom: 1px solid dimgray;
+    }
+      .visible_menu .menu_arrow_up {
+        display: none;
+      }
+      .visible_menu:hover .menu_arrow_up {
+        display: block;
+      }
+      .visible_menu:hover .menu_arrow_down {
+        display: none;
+      } 
+
+    .dropbox {
+      background-color: lightgray;
+      margin: 0 5px 5px;
+      height: 0px;
+      transition: .2s ease-in;
+    }
+    
+    .dropbox:hover {
+      height: 100px;
+    }
+    .dropbox:hover .drop_info {
+      display: grid;
+    }
+      .visible_menu:hover ~ .dropbox {
+        height: 100px;    
+      }
+      .visible_menu:hover ~ .dropbox .drop_info {
+        display: grid;    
+      }
+
+  /* Media links
+  ................................. */
+  .media_contact {
+    align-self: center;
+  }
+    .media_contact > a {
+      color: #bb3a3a;
+
+    }
+    
+/* Other products
+................................................................*/
+.other_products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 12px;
+}
+  .other_products > a {
+    text-decoration: none;
+  }
+    .other_products > a .product_card:hover {
+      opacity: .8;
+    }
+    .other_products > a .product_card {
+      width: 231px; 
+      height: 300px;
+      margin-bottom: 12px;
+    }
+      .other_products > a .product_card
+      img {
+        -o-object-fit: cover;
+           object-fit: cover;
+        width: 231px;
+        height: 270px;
+      }
+      .other_products > a .product_card
+      .product_card_info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+        .other_products > a .product_card
+        .product_card_info > * {
+          margin: .3em 0;
+          font-size: .6em;
+          color: black;
+        }
+        .other_products > a .product_card
+        .product_card_info .price {
+          font-weight: bold;
+        }
+        .other_products > a .product_card
+        .product_card_info .extra {
+          font-size: .6em;
+          font-weight: lighter;
+          color: gray;
+        }
+        .other_products > a .product_card
+        .product_card_info .extra:hover {
+          text-decoration: underline;
+        }
+         /* "new" and "light" tags 
+        .........................................*/
+        .new, .light {
+          width: 50px;
+          font-size: .6em;
+          display: block;
+          position: absolute;
+          margin-left: 181px;
+          padding: .4em .2em;
+        }
+        .new {
+          background-color: dimgrey;
+          -ms-grid-column-align: right;
+              justify-self: right;
+          margin-top: 5px;
+        }
+          .new span {
+            color: white;
+            font-weight: bold;
+            padding-left: 1em; 
+          }
+        .light {
+          background-color: #0e5886;
+          margin-top: 35px;
+        }
+           .light * {
+            color: white;
+            font-weight: lighter;
+            }
